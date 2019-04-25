@@ -1,15 +1,24 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from '../elements/Header/Header';
 import Home from '../Home/Home';
+import Movie from '../Movie/Movie';
+import NotFound from '../elements/NotFound/NotFound'
 
 
 // Stateless functional component
 const App = () => {
     return (
-        <div>
-            <Header />
-            <Home />
-        </div>
+        <BrowserRouter>
+            <React.Fragment>
+                <header />
+                <Switch>
+                    <Route path="/" component={Home} exact />
+                    <Route path="/:movieId" component={Movie} exact />
+                    <Route component={NotFound} />
+                </Switch>
+            </React.Fragment>
+        </BrowserRouter>
     )
 }
 
