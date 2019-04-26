@@ -15,4 +15,13 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
+
+  //,
+  //"homepage" : "My domain url here"
+
+  //How to deploy:
+   // Add homepage url to package.jason
+   // Add baseName property to BrowserRouter in App.js if app is in a domain subfolder
+   // "npm run build" in terminal
+   // Upload everything in the build folder to the correct folder on the server.
 }
